@@ -1,0 +1,83 @@
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    box-shadow: 3px 5px black;
+}
+
+th {
+    font-size: 20px;
+}
+
+tr {
+    font-size: 18px;
+    text-align: center;
+}
+
+th.serial {
+    width: 10%;
+}
+
+th.title {
+    width: 20%;
+}
+
+th.author {
+    width: 30%;
+}
+
+th.pages {
+    width: 10%;
+}
+
+th.read {
+    width: 20%;
+}
+
+th.action {
+    width: 20%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+button.new {
+    box-shadow: 3px 5px grey;
+    font-size: 20px;
+    font-weight: bold;
+    height: 50px;
+    margin-bottom: 15px;
+    width: auto;
+}
+
+form {
+    display: none;
+    font-size: 15px;
+    margin: 15px auto 20px 150px;
+    border: 2px solid black;
+    border-radius: 15px;
+    background-color: mediumaquamarine;
+    width: 20%;
+    padding: 15px;
+}
+
+.hide {
+    display: block;
+}
