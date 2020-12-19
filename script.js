@@ -13,6 +13,7 @@ function Book(title, author, pages, read) {
 let addBookToLibrary = (title, author, pages, read) => {
     let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
+    saveLib();
     display();
 }
 
@@ -62,6 +63,7 @@ let displayBooks = () => {
         delBtn.addEventListener('click', () => {
             table.removeChild(row);
             myLibrary.splice(i, 1);
+            saveLib();
             display();
         })
 
@@ -102,3 +104,20 @@ subBtn.addEventListener('click', () => {
     addBookToLibrary(title, author, pages, read);
     form.classList.toggle('hide');
 })
+
+let saveLib = () => {
+    localStorage.setItem('library', JSON.stringify(myLibrary));
+}
+
+let loadLib = () => {
+    objects = localStorage.getItem('library');
+    objects = JSON.parse(objects);
+    myLibrary = objects;
+    displayBooks();
+}
+
+if (localStorage['library'] != null) {
+    loadLib();
+} else {
+    display();
+}
